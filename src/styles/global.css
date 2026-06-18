@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+:root {
+  --color-primary:        #2F7D5B;
+  --color-primary-light:  #4FA77C;
+  --color-primary-dark:   #1E5A3F;
+  --color-secondary:      #1F7A9C;
+  --color-secondary-light:#3FA3C4;
+  --color-accent:         #E8732C;
+  --color-accent-light:   #F49A5C;
+  --color-accent-dark:    #C25A18;
+  --color-earth:          #B08458;
+  --color-earth-light:    #D9C0A3;
+  --color-bg:             #F7F4EC;
+  --color-bg-alt:         #EFEADD;
+  --color-surface:        #FFFFFF;
+  --color-text:           #2A2620;
+  --color-text-muted:     #6B6357;
+  --color-border:         #E2DACB;
+  --color-shadow:         rgba(42, 38, 32, 0.12);
+
+  --cat-scenery:    #1F7A9C;
+  --cat-nature:     #2F7D5B;
+  --cat-history:    #B08458;
+  --cat-culture:    #8E6FA8;
+  --cat-power:      #C9456B;
+  --cat-gourmet:    #E8732C;
+
+  --font-main: 'Zen Maru Gothic', sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-card: 0 4px 16px var(--color-shadow);
+  --shadow-card-hover: 0 10px 28px rgba(42,38,32,0.20);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

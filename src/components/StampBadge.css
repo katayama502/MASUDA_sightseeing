@@ -1,0 +1,10 @@
+.stamp-badge {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.stamp-svg {
+  width: 100%;
+  height: 100%;
+}

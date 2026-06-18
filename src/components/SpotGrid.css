@@ -1,0 +1,39 @@
+.spot-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .spot-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .spot-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+}
+
+.spot-grid__empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text-muted);
+}
+
+.spot-grid__empty span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.spot-grid__empty p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.spot-grid__empty-sub {
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  margin-top: 6px;
+}

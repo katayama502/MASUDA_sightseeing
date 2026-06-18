@@ -1,0 +1,115 @@
+.celebration {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 90, 63, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 20px;
+  animation: fade-in 0.4s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.celebration__canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.celebration__modal {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+  animation: modal-up 0.5s var(--ease-out);
+}
+
+@keyframes modal-up {
+  from { transform: translateY(40px) scale(0.9); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+.celebration__medal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  animation: medal-drop 0.6s 0.2s var(--ease-out) both;
+}
+
+@keyframes medal-drop {
+  from { transform: scale(1.6) rotate(-10deg); opacity: 0; }
+  70% { transform: scale(0.92) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.celebration__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+.celebration__msg {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.celebration__share {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+.celebration__share-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.celebration__share-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+.celebration__share-btn--x {
+  background: #000;
+  color: #fff;
+}
+
+.celebration__share-btn--line {
+  background: #06C755;
+  color: #fff;
+}
+
+.celebration__close {
+  background: none;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 8px 24px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-main);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.celebration__close:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}

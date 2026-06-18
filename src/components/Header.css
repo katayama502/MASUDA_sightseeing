@@ -1,0 +1,92 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: var(--color-primary);
+  color: #fff;
+  transition: box-shadow 0.3s, padding 0.3s;
+  padding: 12px 20px;
+}
+
+.header--scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  padding: 8px 20px;
+}
+
+.header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo-icon {
+  font-size: 1.6rem;
+}
+
+.header__logo-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.header__logo-sub {
+  font-size: 0.68rem;
+  opacity: 0.8;
+}
+
+.header__badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(255,255,255,0.18);
+  border-radius: var(--radius-pill);
+  padding: 5px 14px;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+
+.header__badge--complete {
+  background: var(--color-accent);
+  animation: badge-glow 2s ease-in-out infinite;
+}
+
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,115,44,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(232,115,44,0); }
+}
+
+.header__crown {
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.header__count {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.header__sep, .header__total {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.header__label {
+  font-size: 0.8rem;
+  margin-left: 3px;
+}
+
+@media (max-width: 480px) {
+  .header__logo-title { font-size: 0.9rem; }
+  .header__logo-sub { display: none; }
+}
